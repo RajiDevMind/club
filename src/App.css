@@ -44,9 +44,15 @@
   margin-right: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 786px) {
+  .linkclass a {
+    padding: 0 10px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
   .nav-container {
-    display: block;
+    display: none;
     max-width: 80%;
     height: 100vh;
   }
@@ -79,7 +85,7 @@
   .icons {
     display: block;
   }
-  .fa-bars {
-    display: none;
-  }
+}
+.show-container {
+  display: block;
 }
