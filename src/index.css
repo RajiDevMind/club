@@ -50,7 +50,7 @@ Variables
   --spacing: 0.15rem;
   --radius: 0.3rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -71,7 +71,7 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   height: 100vh;
-  /* background: url("./images/laptopimg.avif") center/cover no-repeat; */
+  background: linear-gradient(90deg, rgb(55, 232, 252, 0.7), rgb(79, 143, 255));
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -86,6 +86,7 @@ a {
 }
 a:hover {
   color: var(--clr-primary-6);
+  text-shadow: var(--dark-shadow);
 }
 
 h1,
