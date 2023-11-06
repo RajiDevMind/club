@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <>
       <section className="Header">
+        <i className="fa-solid fa-bars icons"></i>
         <div className="header-container">
           <div className="header-text">
             <div>
@@ -26,6 +27,7 @@ const Home = () => {
       <section className="Header sec-head"></section>
       <section className="trusted">
         <h3>Brand that trust us</h3>
+        <div className="brand-container"></div>
       </section>
     </>
   );

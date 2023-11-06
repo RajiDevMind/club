@@ -11,7 +11,6 @@ const Header = () => {
         <Link to="/login">
           <img className="logo" src={logo} alt="clubhouse logo" />
         </Link>
-        <i className="fa-solid fa-bars icons"></i>
         <i className="fa-solid fa-xmark icons"></i>
         <div className="linkclass">
           <Link to="/">Home</Link>
