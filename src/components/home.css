@@ -2,7 +2,7 @@
   width: 100%;
   height: 500px;
 
-  position: fixed;
+  position: relative;
   z-index: 1;
 
   border-bottom-left-radius: 40px;
@@ -10,7 +10,7 @@
   background: linear-gradient(3deg, rgb(0, 0, 0), rgb(0, 35, 163));
 }
 .sec-head {
-  background: absolute;
+  position: absolute;
   left: 0;
   z-index: -1;
   top: 110px;
@@ -37,13 +37,14 @@
   width: 360px;
   border: 2px solid #ffffff;
   padding: 34px 34px 0 0;
-  /* border-radius: 20px; */
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 .header-text {
   text-align: left;
   margin: 0;
+  padding-top: 70px;
+  padding-left: 40px;
 }
 .header-text div h4 {
   font-size: 18px;
@@ -83,4 +84,44 @@
   top: 620px;
   left: 40%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1110px) {
+  .header-container {
+    padding-top: 30px;
+    grid-template-columns: repeat(2, 400px);
+  }
+  .header-img img {
+    width: 315px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Header {
+    width: 100%;
+    min-height: 1000px;
+  }
+  .header-img {
+    padding-top: 20px;
+  }
+
+  .header-img img {
+    width: 330px;
+  }
+  .header-container {
+    padding-top: 5px;
+    grid-template-columns: repeat(1, 400px);
+  }
+  .trusted {
+    top: 1120px;
+  }
+  .sec-head {
+    top: 20px;
+  }
+}
+
+.fa-bars {
+  display: block;
+  color: #ffffff;
+  font-size: 70px;
 }
