@@ -15,10 +15,13 @@
 .nav-container {
   position: relative;
   z-index: 1;
-  background-color: #cccccc;
+  background-color: #cccccc 0.5;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: var(--dark-shadow);
+  border-radius: 30px;
+  margin: 10px 50px;
 }
 .linkclass a {
   padding: 0 20px;
@@ -38,6 +41,7 @@
 .fa-user {
   font-size: 22px;
   padding-right: 20px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 600px) {
