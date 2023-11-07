@@ -15,8 +15,8 @@
   margin-top: 10px;
 }
 nav {
-  position: sticky;
-  top: 0px;
+  /* position: sticky; */
+  /* top: 0px; */
   z-index: 1;
   background: rgb(0, 35, 163);
   display: flex;
@@ -25,6 +25,14 @@ nav {
   box-shadow: var(--dark-shadow);
   border-radius: 30px;
   margin: 0 50px;
+}
+nav {
+  position: fixed;
+  top: 0px; /* Adjust this value to set the level where the navbar stops */
+}
+
+/* stop sticky navigation menu */
+@media (min-width: 768px) {
 }
 .icons {
   position: absolute;
@@ -76,6 +84,14 @@ nav ul {
     display: none;
     background-color: rgb(0, 35, 163);
   }
+  .hideptag {
+    display: block;
+    position: absolute;
+    z-index: 3;
+  }
+}
+.hideptag {
+  display: none;
 }
 .open {
   display: block;

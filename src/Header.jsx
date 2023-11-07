@@ -37,7 +37,6 @@ const Header = () => {
           <NavLink to="/login">
             <i className="fa-solid fa-user fa-beat-fade"></i>
           </NavLink>
-          <p>click the menu button to close this page!</p>
         </li>
       </ul>
     </nav>

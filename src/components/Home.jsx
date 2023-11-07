@@ -1,6 +1,11 @@
 import React from "react";
 import "./home.css";
 import gymguy from "../assets/gym1.png";
+import gym1 from "../assets/gym4.png";
+import gym2 from "../assets/gym3.png";
+import gym3 from "../assets/runing.png";
+import Description from "./Description";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -12,10 +17,12 @@ const Home = () => {
               <h1>
                 <span>get fit stay&nbsp;healthy,</span> transform your life
               </h1>
-              <h4>discover a new you through fitness and welLness</h4>
+              <h4>discover a new you through fitness and wellness!</h4>
             </div>
             <div className="btn">
-              <span>Begin your Journey</span>
+              <Link to="/register">
+                <span>Begin your Journey</span>
+              </Link>
             </div>
           </div>
           <div className="header-img">
@@ -52,7 +59,36 @@ const Home = () => {
             workout at a time."
           </p>
         </div>
+        <img src={gym3} alt="" />
       </section>
+      <div className="img-container">
+        <img src={gym2} alt="" />
+        <img src={gym1} alt="" />
+      </div>
+      <Description />
+      <footer>
+        <div className="footer">
+          <p>about us</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+        </div>
+        <div className="footer">
+          <p>about us</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+        </div>
+        <div className="footer">
+          <p>about us</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+          <p>consultation</p>
+        </div>
+      </footer>
     </>
   );
 };
