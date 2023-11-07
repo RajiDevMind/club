@@ -6,8 +6,10 @@ import gym2 from "../assets/gym3.png";
 import gym3 from "../assets/runing.png";
 import Description from "./Description";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Home = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <section className="Header">
@@ -66,29 +68,7 @@ const Home = () => {
         <img src={gym1} alt="" />
       </div>
       <Description />
-      <footer>
-        <div className="footer">
-          <p>about us</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-        </div>
-        <div className="footer">
-          <p>about us</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-        </div>
-        <div className="footer">
-          <p>about us</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-          <p>consultation</p>
-        </div>
-      </footer>
+      <Footer cYear={currentYear} />
     </>
   );
 };
