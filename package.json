@@ -1,5 +1,5 @@
 {
-  "homepage": "https://RajiDevMind.github.io/clubhouse",
+  "homepage": "https://rajidevmind.github.io/club/",
   "name": "club",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react-dom": "^18.2.0",
