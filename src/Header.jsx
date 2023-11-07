@@ -1,31 +1,45 @@
 import "./App.css";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "./assets/leaftexture.png";
 import user from "./assets/user-solid.svg";
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
   return (
-    <div>
-      <nav className="nav-container">
-        <Link to="/login">
-          <img className="logo" src={logo} alt="clubhouse logo" />
-        </Link>
-        <i className="fa-solid fa-xmark icons"></i>
-        <div className="linkclass">
-          <Link to="/">Home</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/trainers">trainers</Link>
-          <Link to="/pricing">pricing</Link>
-        </div>
-        <div className="logreg">
-          <Link to="/login">
+    <nav>
+      <Link to="/login">
+        <img className="logo" src={logo} alt="clubhouse logo" />
+      </Link>
+      <i
+        className="fa-solid fa-bars icons"
+        onClick={() => {
+          setMenu(!menu);
+        }}
+      ></i>
+      <ul className={menu ? "open" : ""}>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/events">Events</NavLink>
+        </li>
+        <li>
+          <NavLink to="/services">Services</NavLink>
+        </li>
+        <li>
+          <NavLink to="/trainers">trainers</NavLink>
+        </li>
+        <li>
+          <NavLink to="/pricing">pricing</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">
             <i className="fa-solid fa-user fa-beat-fade"></i>
-          </Link>
-        </div>
-      </nav>
-    </div>
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

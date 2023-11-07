@@ -6,34 +6,48 @@
     transform: rotate(360deg);
   }
 }
-
+.active {
+  background: rgb(196, 255, 213, 0.6);
+}
 .logo {
   animation: logo-spin infinite 20s linear;
   width: 70px;
-  margin-left: 20px;
+  margin-top: 10px;
 }
-.nav-container {
-  position: relative;
+nav {
+  position: sticky;
+  top: 0px;
   z-index: 1;
-  background-color: #cccccc 0.5;
+  background: rgb(0, 35, 163);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--dark-shadow);
   border-radius: 30px;
-  margin: 10px 50px;
-}
-.linkclass a {
-  padding: 0 20px;
-  font-size: 22px;
+  margin: 0 50px;
 }
 .icons {
   position: absolute;
-  font-size: 25px;
+  font-size: 30px;
   right: 20px;
-  top: 50px;
+  top: 30px;
 
   display: none;
+}
+
+nav ul li a {
+  display: flex;
+  color: #ffffff;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+
+  font-size: 20px;
+}
+nav ul {
+  display: none;
+  background: rgb(0, 35, 163);
+  border-radius: 30px;
 }
 .icons:hover {
   transform: rotate(360deg);
@@ -44,48 +58,30 @@
   margin-right: 20px;
 }
 
-@media screen and (max-width: 786px) {
-  .linkclass a {
-    padding: 0 10px;
-    font-size: 20px;
-  }
-}
 @media screen and (max-width: 800px) {
-  .nav-container {
-    display: none;
-    max-width: 80%;
-    height: 100vh;
-  }
-  .linkclass {
-    margin-left: 20px;
-  }
-  .linkclass a img {
-    margin-left: 50px;
-  }
-  .linkclass a {
-    background: var(--clr-primary);
-    max-width: 100%;
-    display: block;
-    margin: 25px 0px;
-  }
-  .linkclass a:hover {
-    padding: 1px;
-  }
-  .nav-container a {
-    margin-left: 20px;
-    padding: 25px 0px;
-  }
-  .logo {
-    margin: 30px;
-  }
-  .fa-user {
-    font-size: 25px;
-    padding-left: 20px;
-  }
   .icons {
-    display: block;
+    display: flex;
+  }
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  nav ul.open li {
+    display: none;
+    background-color: rgb(0, 35, 163);
   }
 }
-.show-container {
+.open {
   display: block;
+  background-color: rgb(0, 35, 163);
 }
+/* nav ul {
+   display: none;
+  background-color: #333;
+} */

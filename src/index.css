@@ -82,11 +82,10 @@ ul {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
-a:hover {
-  color: var(--clr-primary-6);
-  text-shadow: var(--dark-shadow);
+a:not(.active):hover {
+  color: #cccc;
 }
 
 h1,
@@ -111,6 +110,8 @@ h4 {
   font-size: 0.875rem;
 }
 p {
+  font-size: 0.975rem;
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
 }
