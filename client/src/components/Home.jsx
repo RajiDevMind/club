@@ -7,8 +7,11 @@ import gym3 from "../assets/runing.png";
 import Description from "./Description";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const { user } = useSelector((state) => state.auth);
+
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -21,9 +24,16 @@ const Home = () => {
               </h1>
               <h4>discover a new you through fitness and wellness!</h4>
             </div>
-            <div className="btn">
-              <Link to="/register">
-                <span>Begin your Journey</span>
+            <div className="btn btn-arrow">
+              <Link to={user?.name ? "/pricing" : "/register"}>
+                <span>
+                  Begin your Journey{" "}
+                  <i
+                    className="fa fa-arrow-right"
+                    size={18}
+                    aria-hidden="true"
+                  ></i>
+                </span>
               </Link>
             </div>
           </div>
@@ -33,10 +43,10 @@ const Home = () => {
         </div>
       </section>
       <section className="Header sec-head"></section>
-      {/* <section className="trusted">
+      <section className="trusted">
         <h3>Brand that trust us</h3>
         <div className="brand-container"></div>
-      </section> */}
+      </section>
       <section className="statement">
         <div>
           <h2>our mission</h2>

@@ -54,3 +54,8 @@ button {
   width: 100%;
   font-size: 21px;
 }
+@media screen and (max-width: 800px) {
+  .form-container {
+    margin: 25% auto;
+  }
+}
